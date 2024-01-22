@@ -11,6 +11,11 @@ ingame_textures_path = '/Game/tool_output/Textures/'
 ingame_materials_path = '/Game/tool_output/Materials/'
 
 
+def main():
+    # Run the script.
+    import_assets()
+
+
 # Function to get all assets inside a given in-game folder path
 def get_assets(folder_path):
     assets_list = []
@@ -95,4 +100,5 @@ def import_assets():
             fbx_object.set_material(material_index, material)
 
 
-import_assets()
+if __name__ == '__main__':
+    main()
